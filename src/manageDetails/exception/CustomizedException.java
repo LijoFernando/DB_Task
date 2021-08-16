@@ -1,4 +1,4 @@
-package manageDetails;
+package src.manageDetails.exception;
 
 public class CustomizedException extends Exception {
     public CustomizedException() {
@@ -9,8 +9,5 @@ public class CustomizedException extends Exception {
             super(msg);
         }
 
-        public CustomizedException(String s,Throwable error) {
-            super(s, error);
-
-        }
+    public CustomizedException(String s,Throwable error) { super(s, error); }
 }

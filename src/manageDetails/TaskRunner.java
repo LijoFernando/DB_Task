@@ -1,6 +1,9 @@
-package manageDetails;
+package src.manageDetails;
 
-import java.sql.SQLException;
+import src.manageDetails.exception.CustomizedException;
+import src.manageDetails.inputLayer.AddAccountInfo;
+import src.manageDetails.inputLayer.AddCustomer;
+
 import java.util.Scanner;
 
 public class TaskRunner {
@@ -40,13 +43,7 @@ public class TaskRunner {
         }
 
         else if (choice == 2){
-//            try {
-//                System.out.println("Enter your customer ID");
-//                int cusId = input.nextInt();
-//                addAccountInfo.AccountInput(cusId);
-//            } catch (MyException e){
-//                System.out.println( e.getMessage());
-//            }
+
         }
 
         else if(choice == 3){

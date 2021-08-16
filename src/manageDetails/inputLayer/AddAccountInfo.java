@@ -1,4 +1,8 @@
-package manageDetails;
+package src.manageDetails.inputLayer;
+
+import src.manageDetails.exception.CustomizedException;
+import src.manageDetails.dataBase.DBOperation;
+import src.manageDetails.pojo.AccountInfo;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -9,7 +13,7 @@ public class AddAccountInfo {
     AccountInfo accountInfo = new AccountInfo();
     ArrayList<AccountInfo> accountInfoArrayList = new ArrayList<>();
 
-    public ArrayList<AccountInfo> accountInput( ) throws CustomizedException{
+    public ArrayList<AccountInfo> accountInput( ) throws CustomizedException {
 
         try {
             System.out.println("Enter Account Info of " );

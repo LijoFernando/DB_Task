@@ -1,6 +1,4 @@
-package manageDetails;
-
-import java.util.Random;
+package src.manageDetails.pojo;
 
 public class AccountInfo {
 

@@ -1,4 +1,9 @@
-package manageDetails;
+package src.manageDetails.inputLayer;
+
+import src.manageDetails.exception.CustomizedException;
+import src.manageDetails.dataBase.DBOperation;
+import src.manageDetails.pojo.AccountInfo;
+import src.manageDetails.pojo.Customer;
 
 import java.sql.Date;
 import java.util.ArrayList;

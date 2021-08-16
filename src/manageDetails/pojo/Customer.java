@@ -1,4 +1,4 @@
-package manageDetails;
+package src.manageDetails.pojo;
 
 import java.sql.Date;
 

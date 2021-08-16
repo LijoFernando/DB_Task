@@ -1,12 +1,15 @@
-package manageDetails;
+package src.manageDetails;
 
-import java.sql.SQLException;
+import src.manageDetails.dataBase.DBOperation;
+import src.manageDetails.exception.CustomizedException;
+import src.manageDetails.pojo.AccountInfo;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class LoadData {
     DBOperation dbOperation =  new DBOperation();
-    HashMap <Integer, HashMap<Long,AccountInfo> > outerHashMap = new HashMap<>();
+    HashMap <Integer, HashMap<Long, AccountInfo> > outerHashMap = new HashMap<>();
 
     public String loadHashMap() throws CustomizedException {
         //load hashMap from DB
