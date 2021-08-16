@@ -9,7 +9,7 @@ import java.util.HashMap;
 
 public class LoadData {
     DBOperation dbOperation =  new DBOperation();
-    HashMap <Integer, HashMap<Long, AccountInfo> > outerHashMap = new HashMap<>();
+    HashMap <Integer, HashMap<Integer, AccountInfo> > outerHashMap = new HashMap<>();
 
     public String loadHashMap() throws CustomizedException {
         //load hashMap from DB
@@ -17,13 +17,13 @@ public class LoadData {
         try {
             for (AccountInfo accountinfo : dbArrayList) {
                 int cusId = accountinfo.getCusId();
-                long accNo = accountinfo.getAccNo();
-                HashMap<Long, AccountInfo> innerHashMap = outerHashMap.get(cusId);
+                int accId = accountinfo.getAccId();
+                HashMap<Integer, AccountInfo> innerHashMap = outerHashMap.get(cusId);
                 if (innerHashMap == null) {
                     innerHashMap = new HashMap<>();
                     outerHashMap.put(cusId, innerHashMap);
                 }
-                innerHashMap.put(accNo, accountinfo);
+                innerHashMap.put(accId, accountinfo);
             }
             System.out.println(outerHashMap.entrySet());
             return "HashMap Loaded Successfully";

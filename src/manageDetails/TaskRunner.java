@@ -18,7 +18,7 @@ public class TaskRunner {
         }catch (CustomizedException e ){
             e.printStackTrace();
             e.getCause();
-            System.out.println("Databas cannot be loaded");
+            System.out.println("Database cannot be loaded");
         }
        // System.out.println(syncHashMap.loadHashMap());
         //-----------------------------------

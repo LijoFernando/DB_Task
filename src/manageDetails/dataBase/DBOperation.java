@@ -24,9 +24,10 @@ public class DBOperation {
     public ArrayList<AccountInfo> accountInfoRecords() throws CustomizedException {
         ArrayList<AccountInfo> accountInfoArray = new ArrayList<>();
         String query = "SELECT * FROM AccountInfo";
+
         try {
             PreparedStatement ps  = getConnection().prepareStatement(query);
-            ResultSet rs  = ps.executeQuery();
+            ResultSet rs = ps.executeQuery();
                 try {
                     while (rs.next()) {
                         AccountInfo accountInfo = new AccountInfo();
@@ -67,7 +68,7 @@ public class DBOperation {
                 }
                 ps.executeBatch();
                 rs = ps.getGeneratedKeys();
-                if(rs.next()) {
+                while(rs.next()) {
                     int i = 0;
                     cusId[i]= rs.getInt(1);
                     i++;
